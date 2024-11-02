@@ -33,6 +33,17 @@ def draw():
     screen.clear()
     ball.draw()
 
+def update(dt):
+    #apply constant acceleration formulae
+    uy = ball.vy
+    ball.vy = ball.vy + (GRAVITY * dt)
+    #bally.vy = ball.vy + (GRAVITY * dt)
+     
+    ball.y += (uy + ball.vy) * 0.5 * dt
+
+    #detect and handle the bounce 
+#finishing next lesson
+
 
 
 pgzrun.go()
